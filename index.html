@@ -3,98 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Youssef Boufounas - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            padding-top: 56px; /* Pour compenser la hauteur de la barre de navigation */
+        }
+        .navbar {
+            background-color: #003366; /* Bleu foncé */
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
+
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-1">
         <div class="container">
-            <h1 class="logo">Mon Portfolio</h1>
-            <nav class="nav">
-                <a href="#about-me">À propos</a>
-                <a href="#skills">Compétences</a>
-                <a href="#projects">Projets</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <img src="C:\Users\Dell\OneDrive\Bureau\portfolio.ysf\assets\WhatsApp Image 2024-10-04 à 17.45.08_715ad59e.jpg" alt="Youssef Boufounas" class="border border-4 border-white mb-1" width="150">
+            <h1 class="display-4">Youssef Boufounas</h1>
+            <p class="lead">Élève ingénieur en génie informatique</p>
+            <p>À la recherche d’un stage de fin d’études</p>
         </div>
     </header>
 
-    <main>
-        <section id="about-me" class="about-me">
-            <h1>Bonjour, je suis BOUFOUNAS Youssef</h1>
-            <p>Étudiant en 5ème année d'ingénierie à l'EMSI, passionné par le développement web et les technologies émergentes, je suis à la recherche d'un stage de fin d'études (PFE).</p>
-        </section>
-
-        <section id="skills" class="skills">
-            <h2>Technologies adoptées</h2>
-            <div class="logos">
-                <img src="assets/logo_python.png" alt="Python">
-                <img src="assets/logo_java.png" alt="Java">
-                <img src="assets/logo_flask.png" alt="Flask">
-                <img src="assets/logo_django.png" alt="Django">
-                <img src="assets/logo_javascript.png" alt="JavaScript">
-                <img src="assets/logo_springboot.png" alt="Spring Boot">
-                <img src="assets/logo_php.png" alt="PHP">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#profil">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#interests">Centres d’intérêts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#formations">Formations & Diplômes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#experiences">Expériences Professionnelles</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <section id="tools" class="tools">
-            <h2>Outils Utilisés</h2>
-            <div class="logos">
-                <img src="assets/logo_vscode.png" alt="VS Code">
-                <img src="assets/logo_intellij.png" alt="IntelliJ IDEA">
-                <img src="assets/logo_vs.png" alt="Visual Studio">
-                <img src="assets/logo_eclipse.png" alt="Eclipse">
-            </div>
-        </section>
-
-        <section id="databases" class="databases">
-            <h2>SGBD</h2>
-            <div class="logos">
-                <img src="assets/logo_mysql.png" alt="MySQL">
-                <img src="assets/logo_postgresql.png" alt="PostgreSQL">
-                <img src="assets/logo_sqlite.png" alt="SQLite">
-                <img src="assets/logo_mongodb.png" alt="MongoDB">
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2>Mes Projets</h2>
-            <div class="project-cards">
-                <div class="card" onclick="openGithub('https://github.com/Ysf-08/location-de-voiture/tree/master/stage')">
-                    <h3>Projet 1</h3>
-                    <p>Application web de location de voiture</p>
-                </div>
-                <div class="card" onclick="openGithub('https://github.com/ton-projet2')">
-                    <h3>Projet 2</h3>
-                    <p>Plugin « Code Assistant » basé sur l'IA pour les développeurs.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact">
-        <h3>Me suivre</h3>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/tonprofil" target="_blank">
-                <img src="assets/logo_linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://www.github.com" target="_blank"></a>
-                <img src="assets/logo_github.png" alt="GitHub">
-            </a>
-            <a href="https://www.facebook.com/tonprofil" target="_blank">
-                <img src="assets/logo_facebook.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/tonprofil" target="_blank">
-                <img src="assets/logo_instagram.png" alt="Instagram">
-            </a>
         </div>
+    </nav>
+
+    <!-- Contact & Profil Section -->
+    <section id="contact" class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h2 class="text-primary">Contact</h2>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-phone"></i> +212637799874</li>
+                    <li><i class="bi bi-envelope"></i> youssefboufounas25@gmail.com</li>
+                    <li><i class="bi bi-geo-alt"></i> 464, El Bassatine 7, Tranche 3, Meknès, Maroc</li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/youssef-boufounas-aba603208?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="text-primary" target="_blank">
+                            <img src="C:\Users\Dell\OneDrive\Bureau\portfolio.ysf\assets\logo_linkedin.png" alt="@Youssef BOUFOUNAS" style="width: 45px; height: 50px; margin-right: 5px;"> @Youssef BOUFOUNAS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Ysf-08" class="text-primary" target="_blank">
+                            <img src="C:\Users\Dell\OneDrive\Bureau\portfolio.ysf\assets\image.png" alt="@YSF-08" style="width: 35px; height: 35px; margin-right: 7px;">
+                            @YSF-08
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h2 class="text-primary">Profil</h2>
+                <p>Elève ingénieur motivé et déterminé en cinquième année d'ingénierie à l'école marocaine des sciences de l'ingénieur, passionné par l'innovation et l'application de la technologie dans le domaine informatique, j'ai une solide base académique et des compétences en conception et en développement axées sur la résolution des problèmes, mon objectif est donc de mettre en avant mon profil dans un cadre industriel et professionnel pour aborder les défis techniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="competences" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center text-primary">Compétences</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3 class="text-secondary">Langages de programmation</h3>
+                    <ul class="list-unstyled">
+                        <li>C/C++, Python, Java</li>
+                        <li>JavaScript (React, VueJS, NextJS)</li>
+                        <li>Frameworks: Flask, Django, SpringBoot</li>
+                        <li>Front-end: Angular, Native</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-secondary">Base de données</h3>
+                    <ul class="list-unstyled">
+                        <li>Oracle</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>SQL Server</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-secondary">Soft Skills</h3>
+                    <ul class="list-unstyled">
+                        <li>Adaptabilité</li>
+                        <li>Leadership</li>
+                        <li>Innovation</li>
+                        <li>Esprit d'équipe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-primary">Centres d’intérêts</h2>
+                <ul class="list-unstyled">
+                    <li>Voyage</li>
+                    <li>Théâtre</li>
+                    <li>Bénévolat</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-primary">Certifications</h2>
+                <ul class="list-unstyled">
+                    <li>Coursera Python</li>
+                    <li>Coursera Linux</li>
+                    <li>Coursera React</li>
+                    <li>Coursera UML</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formations & Diplômes Section -->
+    <section id="formations" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-primary text-center">Formations & Diplômes</h2>
+            <ul class="list-unstyled text-center">
+                <li><strong>Cycle ingénieur</strong> : Génie Informatique - EMSI, Rabat</li>
+                <li><strong>Cycle préparatoire intégré</strong> - EMSI, Rabat</li>
+                <li><strong>Baccalauréat scientifique</strong> - Lycée Emile Anouar, Meknès</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Expériences Professionnelles Section -->
+    <section id="experiences" class="container my-5">
+        <h2 class="text-center text-primary">Stage et Projets réalisés</h2>
+        <div class="row">
+            <!-- Zoutina Car Experience -->
+            <div class="col-md-6">
+                <a href="https://github.com/Ysf-08/location-de-voiture/tree/master/stage" target="_blank" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm hover-card">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">Zoutina Car - Stage</h4>
+                            <p class="card-text text-dark">Développement d’une application de location de voitures en ligne.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Bank Al-Maghrib Experience -->
+            <div class="col-md-6">
+                <a href="https://github.com/Ysf-08/OEMS" target="_blank" class="text-decoration-none">
+                    <div class="card border-0 shadow-sm hover-card">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary">Bank Al-Maghrib - Stage de fin d’études</h4>
+                            <p class="card-text text-dark">Développement d’un assistant de codage en utilisant l’IA et la NLP.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Youssef Boufounas. Tous droits réservés.</p>
     </footer>
 
-    <script>
-        function openGithub(url) {
-            window.open(url, '_blank');
-        }
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

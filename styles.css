@@ -1,125 +1,107 @@
-/* Typographie et mise en page générale */
-body {
-    background-color: #f0f2f5;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 56px;
-    text-align: center;
-    color: #333;
+/* Global Styles */
+body.bg-dark-blue {
+    background-color: #002b5c; /* Darker blue */
+    color: white;
 }
 
-h1, h2, h3, h4 {
-    color: #0056b3;
+h2 {
+    color: #0096ff; /* Bright blue for contrast */
+    margin-bottom: 1.5rem;
 }
 
-/* Navbar */
 .navbar {
-    background: linear-gradient(90deg, #003366, #0056b3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
+    padding: 1rem;
 }
 
-.nav-link:hover {
-    color: #00bfff;
-    transition: color 0.3s ease;
+.navbar a {
+    text-decoration: none;
 }
 
-/* En-tête et photo de profil */
 header {
-    background: linear-gradient(135deg, #0056b3, #003366);
-    color: #fff;
-    padding: 80px 0;
+    background-color: #002b5c;
+    color: white;
+    padding: 4rem 0;
 }
 
-/* Photo de profil */
-header img {
-    width: 120px; /* Taille réduite pour un effet plus moderne */
-    height: 120px; /* Maintient des proportions */
-    border-radius: 50%; /* Forme ronde */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
-    object-fit: cover; /* Adapte l'image au cadre sans déformation */
+/* Smooth Card Styling */
+.custom-card {
+    background-color: white;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease-in-out;
 }
 
-header img:hover {
-    transform: scale(1.1); /* Zoom léger au survol */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Accentuation de l'ombre au survol */
+.custom-card h2, .custom-card h3 {
+    color: #002b5c; /* Darker blue for heading text */
 }
 
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
+.custom-card-hover {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-header p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.custom-card-hover:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transform: translateY(-10px);
 }
 
-/* Cartes */
-.card {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Footer Styling */
+footer.bg-darker-blue {
+    background-color: #001b3a;
+    color: white;
+    padding: 3rem 0;
 }
 
-.card:hover {
-    transform: scale(1.05); /* Légère augmentation de taille au survol */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+footer h2 {
+    color: #0096ff;
 }
 
-.hover-card:hover {
-    background-color: #f0f8ff; /* Couleur de fond légère au survol */
-}
-
-/* Listes sans puces */
-ul {
-    list-style-type: none;
+footer ul {
+    list-style: none;
     padding: 0;
 }
 
-ul li {
-    padding: 5px 0;
+footer ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
-/* Footer */
-footer {
-    padding: 10px 0;
-    background-color: #003366;
-    color: #fff;
+footer ul li i {
+    margin-right: 10px;
 }
 
-/* Animations des sections */
-section[data-aos="fade-up"] {
-    opacity: 0;
-    transition: opacity 0.6s ease-out;
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
+form .form-label {
+    color: white;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+form .form-control {
+    background-color: #f8f9fa;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5px;
+}
 
-    header p {
-        font-size: 1rem;
-    }
+form button {
+    background-color: #0096ff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-    .container {
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 40px 0;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
+form button:hover {
+    background-color: #007acc;
 }

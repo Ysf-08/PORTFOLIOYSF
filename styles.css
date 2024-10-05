@@ -1,100 +1,125 @@
->[styles.css]
-```css
-/* Custom Styles */
+/* Typographie et mise en page générale */
 body {
-    font-family: 'Inter', sans-serif;
-}
-
-.navbar {
-    background-color: #007bff;
-    padding: 1rem;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-}
-
-.navbar .btn-warning {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 56px;
+    text-align: center;
     color: #333;
 }
 
-header {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
+h1, h2, h3, h4 {
+    color: #0056b3;
 }
 
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #003366, #0056b3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00bfff;
+    transition: color 0.3s ease;
+}
+
+/* En-tête et photo de profil */
+header {
+    background: linear-gradient(135deg, #0056b3, #003366);
+    color: #fff;
+    padding: 80px 0;
+}
+
+/* Photo de profil */
 header img {
-    border-radius: 50%;
-    width: 150px;
-    margin-bottom: 1rem;
+    width: 120px; /* Taille réduite pour un effet plus moderne */
+    height: 120px; /* Maintient des proportions */
+    border-radius: 50%; /* Forme ronde */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+    object-fit: cover; /* Adapte l'image au cadre sans déformation */
+}
+
+header img:hover {
+    transform: scale(1.1); /* Zoom léger au survol */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Accentuation de l'ombre au survol */
 }
 
 header h1 {
-    margin-top: 1rem;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 header p {
-    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
-section {
-    padding: 3rem 0;
-}
-
+/* Cartes */
 .card {
-    border: 1px solid #007bff;
-    background-color: #f0f8ff;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h2, .card h3, .card h4 {
-    color: #007bff;
+.card:hover {
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
 }
 
-.bg-light {
-    background-color: #e3f2fd !important;
+.hover-card:hover {
+    background-color: #f0f8ff; /* Couleur de fond légère au survol */
 }
 
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 1rem;
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    left: 0;
-    top: 56px;
-    height: 100%;
-    width: 250px;
-    background-color: #007bff;
-    padding-top: 1rem;
-}
-
-.sidebar ul {
+/* Listes sans puces */
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-.sidebar ul li {
-    margin: 1rem 0;
+ul li {
+    padding: 5px 0;
 }
 
-.sidebar ul li a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
+/* Footer */
+footer {
+    padding: 10px 0;
+    background-color: #003366;
+    color: #fff;
 }
 
-.sidebar ul li a:hover {
-    background-color: #0056b3;
-    border-radius: 5px;
+/* Animations des sections */
+section[data-aos="fade-up"] {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
 }
 
-.main-content {
-    margin-left: 260px;
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }

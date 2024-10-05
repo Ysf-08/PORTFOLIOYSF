@@ -8,11 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Corps de la page */
         body {
-            padding-top: 56px; /* For Navbar offset */
+            padding-top: 56px;
             background-color: #f0f2f5;
             font-family: 'Poppins', sans-serif;
             color: #333;
+            text-align: center;
         }
 
         /* Navbar */
@@ -21,12 +23,8 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .navbar-brand {
+        .navbar-brand, .nav-link {
             font-weight: bold;
-            color: #fff;
-        }
-
-        .nav-link {
             color: #fff;
         }
 
@@ -34,12 +32,11 @@
             color: #00bfff;
         }
 
-        /* Header */
+        /* En-tête */
         header {
             background: linear-gradient(135deg, #0056b3, #003366);
             color: #fff;
             padding: 80px 0;
-            text-align: center;
         }
 
         header img {
@@ -63,52 +60,43 @@
             margin-bottom: 10px;
         }
 
-        /* Sections */
-        section {
-            padding: 60px 0;
+        /* Sections avec cartes */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
         }
 
         h2 {
             color: #0056b3;
             font-weight: 600;
             margin-bottom: 30px;
+            text-align: center;
         }
 
-        .container {
-            max-width: 1000px;
+        /* Listes sans puces */
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
 
-        /* Contact & Profil */
-        #contact ul, #profil p {
-            font-size: 1rem;
+        ul li {
+            padding: 5px 0;
         }
 
-        /* Hover effect for cards */
-        .hover-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .hover-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Footer */
         footer {
             background-color: #003366;
             color: #fff;
             padding: 20px 0;
         }
 
-        footer p {
-            margin: 0;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2rem;
@@ -183,21 +171,24 @@
     <section id="contact" class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2>Contact</h2>
-                <ul class="list-unstyled">
-                    <li><i class="bi bi-phone"></i> +212637799874</li>
-                    <li><i class="bi bi-envelope"></i> youssefboufounas25@gmail.com</li>
-                    <li><i class="bi bi-geo-alt"></i> 464, El Bassatine 7, Tranche 3, Meknès, Maroc</li>
-                    <li><a href="https://www.linkedin.com/in/youssef-boufounas-aba603208" target="_blank">
-                        <img src="assets/logo_linkedin.png" alt="LinkedIn" width="40"> @Youssef BOUFOUNAS</a>
-                    </li>
-                    <li><a href="https://github.com/Ysf-08" target="_blank">
-                        <img src="assets/logo_github.png" alt="GitHub" width="35"> @YSF-08</a></li>
-                </ul>
+                <div class="card">
+                    <h2>Contact</h2>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-phone"></i> +212637799874</li>
+                        <li><i class="bi bi-envelope"></i> youssefboufounas25@gmail.com</li>
+                        <li><i class="bi bi-geo-alt"></i> 464, El Bassatine 7, Tranche 3, Meknès, Maroc</li>
+                        <li><a href="https://www.linkedin.com/in/youssef-boufounas-aba603208" target="_blank">
+                            <img src="assets/logo_linkedin.png" alt="LinkedIn" width="40"> @Youssef BOUFOUNAS</a></li>
+                        <li><a href="https://github.com/Ysf-08" target="_blank">
+                            <img src="assets/logo_github.png" alt="GitHub" width="35"> @YSF-08</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-8">
-                <h2>Profil</h2>
-                <p>Élève ingénieur passionné par l'innovation et l'informatique...</p>
+                <div class="card">
+                    <h2>Profil</h2>
+                    <p>Élève ingénieur passionné par l'innovation et l'informatique...</p>
+                </div>
             </div>
         </div>
     </section>
@@ -205,54 +196,64 @@
     <!-- Compétences Section -->
     <section id="competences" class="bg-light">
         <div class="container">
-            <h2 class="text-center">Compétences</h2>
+            <h2>Compétences</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Langages</h3>
-                    <ul>
-                        <li>C/C++, Python, Java</li>
-                        <li>JavaScript (React, VueJS)</li>
-                        <li>Frameworks: Flask, Django, SpringBoot</li>
-                    </ul>
+                    <div class="card">
+                        <h3>Langages</h3>
+                        <ul>
+                            <li>C/C++, Python, Java</li>
+                            <li>JavaScript (React, VueJS)</li>
+                            <li>Frameworks: Flask, Django, SpringBoot</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h3>Base de données</h3>
-                    <ul>
-                        <li>Oracle</li>
-                        <li>MySQL, PostgreSQL</li>
-                    </ul>
+                    <div class="card">
+                        <h3>Base de données</h3>
+                        <ul>
+                            <li>Oracle</li>
+                            <li>MySQL, PostgreSQL</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li>Leadership, Innovation</li>
-                    </ul>
+                    <div class="card">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Leadership, Innovation</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications & Interests -->
+    <!-- Certifications & Centres d’intérêt -->
     <section id="certifications" class="container">
         <div class="row">
             <div class="col-md-6">
-                <h2>Certifications</h2>
-                <ul>
-                    <li>Python, Linux (Coursera)</li>
-                </ul>
+                <div class="card">
+                    <h2>Certifications</h2>
+                    <ul>
+                        <li>Python, Linux (Coursera)</li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-6">
-                <h2>Centres d’intérêts</h2>
-                <ul>
-                    <li>Voyage, Théâtre</li>
-                </ul>
+                <div class="card">
+                    <h2>Centres d’intérêts</h2>
+                    <ul>
+                        <li>Voyage, Théâtre</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Expériences Section -->
     <section id="experiences" class="container">
-        <h2 class="text-center">Expériences</h2>
+        <h2>Expériences</h2>
         <div class="row">
             <div class="col-md-6">
                 <a href="https://github.com/Ysf-08/location-de-voiture" class="text-decoration-none">
@@ -280,12 +281,14 @@
     <!-- Formations & Diplômes Section -->
     <section id="formations" class="bg-light">
         <div class="container">
-            <h2 class="text-center">Formations & Diplômes</h2>
-            <ul class="list-unstyled text-center">
-                <li><strong>Cycle ingénieur</strong> : Génie Informatique - EMSI, Rabat</li>
-                <li><strong>Cycle préparatoire intégré</strong> - EMSI, Rabat</li>
-                <li><strong>Baccalauréat scientifique</strong> - Lycée Emile Anouar, Meknès</li>
-            </ul>
+            <h2>Formations & Diplômes</h2>
+            <div class="card text-center">
+                <ul class="list-unstyled">
+                    <li><strong>Cycle ingénieur</strong> : Génie Informatique - EMSI, Rabat</li>
+                    <li><strong>Cycle préparatoire intégré</strong> - EMSI, Rabat</li>
+                    <li><strong>Baccalauréat scientifique</strong> - Lycée Emile Anouar, Meknès</li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -296,5 +299,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
-            

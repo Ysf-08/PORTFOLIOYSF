@@ -1,59 +1,117 @@
-/* Styles généraux */
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
+    padding-top: 56px;
     color: #333;
-  }
-  
-  .container {
-    text-align: center;
-  }
-  
-  .profile-img {
+}
+
+h1, h2, h3, p {
+    transition: color 0.3s ease-in-out;
+}
+
+h1:hover, h2:hover, h3:hover, p:hover {
+    color: #0056b3;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003366;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar a.nav-link:hover {
+    color: #00bfff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #00bfff;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #0056b3 30%, #003366);
+    animation: fadeIn 1.5s ease-in-out;
+    border-bottom: 5px solid white;
+}
+
+header img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-  }
-  
-  h1 {
-    font-size: 2.5em;
-    margin: 10px 0;
-  }
-  
-  p {
-    font-size: 1.2em;
-  }
-  
-  /* Styles pour les icônes LinkedIn et GitHub */
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  .social-icons img.icon {
-    width: 40px;
-    height: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-  }
-  
-  .social-icons img.icon:hover {
+}
+
+header img:hover {
     transform: scale(1.1);
-  }
-  
-  /* Styles pour les cartes d'expériences */
-  .card {
-    border: 1px solid #007bff; /* Couleur de bordure personnalisée */
-  }
-  
-  .card-title {
-    font-size: 1.5em;
-  }
-  
-  .card-text {
-    font-size: 1em;
-  }
-  
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+/* Section Animations */
+section {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Competences Section */
+#competences .col-md-4 {
+    transition: transform 0.3s ease;
+}
+
+#competences .col-md-4:hover {
+    transform: translateY(-10px);
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Cards for Experiences */
+.hover-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Button Styles */
+a {
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+}

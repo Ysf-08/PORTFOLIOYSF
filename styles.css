@@ -1,10 +1,10 @@
 /* Corps de la page */
 body {
-    padding-top: 56px; /* Pour éviter le chevauchement de la navbar */
+    padding-top: 56px;
     background-color: #f0f2f5;
     font-family: 'Poppins', sans-serif;
     color: #333;
-    text-align: center; /* Centralisation du texte */
+    text-align: center;
 }
 
 /* Navbar */
@@ -50,9 +50,18 @@ header p {
     margin-bottom: 10px;
 }
 
-/* Sections */
-section {
-    padding: 60px 0;
+/* Sections avec cartes */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 h2 {
@@ -62,34 +71,22 @@ h2 {
     text-align: center;
 }
 
-/* Conteneur */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
+/* Listes sans puces */
+ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* Cartes survolées */
-.hover-card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ul li {
+    padding: 5px 0;
 }
 
-.hover-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Pied de page */
 footer {
     background-color: #003366;
     color: #fff;
     padding: 20px 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;

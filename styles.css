@@ -1,110 +1,56 @@
-/* Corps de la page */
+/* Typographie */
 body {
+    background: linear-gradient(135deg, #b3e5fc, #e1f5fe);
+    font-family: 'Inter', sans-serif;
     padding-top: 56px;
-    background-color: #f0f2f5;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
     text-align: center;
+    color: #333;
 }
 
-/* Navbar */
+h1, h2, h3, h4 {
+    color: #0056b3;
+}
+
 .navbar {
-    background: linear-gradient(90deg, #003366, #0056b3);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand, .nav-link {
-    font-weight: bold;
-    color: #fff;
+    background: rgba(0, 86, 179, 0.9);
+    transition: background 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #00bfff;
+    color: #ffcc00;
+    transition: color 0.3s ease;
 }
 
-/* En-tête */
-header {
-    background: linear-gradient(135deg, #0056b3, #003366);
-    color: #fff;
-    padding: 80px 0;
-}
-
-header img {
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-    width: 150px;
-}
-
-header img:hover {
-    transform: scale(1.1);
-}
-
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-header p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-/* Sections avec cartes */
 .card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-h2 {
-    color: #0056b3;
-    font-weight: 600;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-/* Listes sans puces */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    padding: 5px 0;
+.hover-card:hover {
+    background-color: #f0f8ff;
 }
 
 footer {
-    background-color: #003366;
+    padding: 10px 0;
+    background-color: #333;
     color: #fff;
-    padding: 20px 0;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
+/* Animation des sections */
+section[data-aos="fade-up"] {
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
 
-    header p {
-        font-size: 1rem;
-    }
-
-    .container {
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 40px 0;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
 }

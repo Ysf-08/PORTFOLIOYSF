@@ -1,43 +1,50 @@
 /* Variables de couleurs */
 :root {
-    --dark-blue: #002b5c;
-    --bright-blue: #0096ff;
-    --darker-blue: #001b3a;
+    --dark-background: #000000; /* Noir profond pour le fond */
+    --dark-yellow: #d4af37; /* Jaune foncé pour les grands titres */
+    --accent-blue: #0096ff; /* Bleu vif pour les accents */
     --light-gray: #f8f9fa;
-    --dark-text: #333;
+    --light-text: #e0e0e0; /* Texte clair sur fond noir */
     --white: #fff;
+    --border-gray: #333;
 }
 
 /* Global Styles */
-body.bg-dark-blue {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    font-family: Arial, sans-serif;
+body.bg-dark {
+    background-color: var(--dark-background);
+    color: var(--light-text);
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
-    color: var(--bright-blue);
+    color: var(--dark-yellow); /* Jaune foncé pour les grands titres */
     margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .navbar {
     padding: 1rem;
-    background-color: var(--dark-blue);
+    background-color: var(--dark-background);
+    border-bottom: 1px solid var(--border-gray);
 }
 
 .navbar a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--light-text);
     transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-    color: var(--bright-blue);
+    color: var(--dark-yellow);
 }
 
 header {
-    background-color: var(--dark-blue);
-    color: var(--white);
+    background-color: var(--dark-background);
+    color: var(--light-text);
     padding: 4rem 0;
     text-align: center;
 }
@@ -45,7 +52,7 @@ header {
 /* Smooth Card Styling */
 .custom-card {
     background-color: var(--white);
-    color: var(--dark-text);
+    color: var(--border-gray);
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -54,7 +61,7 @@ header {
 }
 
 .custom-card h2, .custom-card h3 {
-    color: var(--dark-blue);
+    color: var(--dark-yellow); /* Jaune foncé pour les titres dans les cartes */
 }
 
 .custom-card-hover {
@@ -71,15 +78,15 @@ header {
 }
 
 /* Footer Styling */
-footer.bg-darker-blue {
-    background-color: var(--darker-blue);
-    color: var(--white);
+footer.bg-dark {
+    background-color: var(--dark-background);
+    color: var(--light-text);
     padding: 3rem 0;
     text-align: center;
 }
 
 footer h2 {
-    color: var(--bright-blue);
+    color: var(--dark-yellow);
 }
 
 footer ul {
@@ -104,7 +111,7 @@ form {
 }
 
 form .form-label {
-    color: var(--white);
+    color: var(--light-text);
 }
 
 form .form-control {
@@ -117,11 +124,11 @@ form .form-control {
 
 form .form-control:focus {
     outline: none;
-    box-shadow: 0 0 5px var(--bright-blue);
+    box-shadow: 0 0 5px var(--accent-blue);
 }
 
 form button {
-    background-color: var(--bright-blue);
+    background-color: var(--accent-blue);
     border: none;
     padding: 0.75rem 1.5rem;
     color: var(--white);

@@ -1,6 +1,6 @@
 /* Variables de couleurs */
 :root {
-    --dark-background: #000000; /* Noir profond pour tout le fond */
+    --dark-background: #000000; /* Fond noir sur tout le site */
     --very-dark-yellow: #a3891d; /* Jaune très foncé pour les grands titres */
     --accent-blue: #0096ff; /* Bleu vif pour les accents */
     --light-gray: #f8f9fa;
@@ -10,7 +10,7 @@
 }
 
 /* Global Styles */
-body.bg-dark {
+body {
     background-color: var(--dark-background); /* Fond noir sur tout le site */
     color: var(--light-text);
     font-family: 'Helvetica Neue', sans-serif;
@@ -19,7 +19,7 @@ body.bg-dark {
 }
 
 h2 {
-    color: var(--very-dark-yellow); /* Jaune très foncé pour les titres */
+    color: var(--very-dark-yellow); /* Jaune très foncé pour les grands titres */
     margin-bottom: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -47,7 +47,6 @@ header {
     color: var(--light-text);
     padding: 4rem 0;
     text-align: center;
-    margin-bottom: 2rem; /* Petit espace entre le header et le contenu suivant */
 }
 
 .profile-photo {
@@ -83,7 +82,7 @@ header {
 }
 
 /* Footer Styling */
-footer.bg-dark {
+footer {
     background-color: var(--dark-background);
     color: var(--light-text);
     padding: 3rem 0;
@@ -91,7 +90,7 @@ footer.bg-dark {
 }
 
 footer h2 {
-    color: var(--very-dark-yellow);
+    color: var(--very-dark-yellow); /* Jaune très foncé pour les titres du footer */
 }
 
 footer ul {

@@ -1,7 +1,7 @@
 /* Variables de couleurs */
 :root {
-    --dark-background: #000000; /* Noir profond pour le fond */
-    --dark-yellow: #d4af37; /* Jaune foncé pour les grands titres */
+    --dark-background: #000000; /* Noir profond pour tout le fond */
+    --very-dark-yellow: #a3891d; /* Jaune très foncé pour les grands titres */
     --accent-blue: #0096ff; /* Bleu vif pour les accents */
     --light-gray: #f8f9fa;
     --light-text: #e0e0e0; /* Texte clair sur fond noir */
@@ -11,7 +11,7 @@
 
 /* Global Styles */
 body.bg-dark {
-    background-color: var(--dark-background);
+    background-color: var(--dark-background); /* Fond noir sur tout le site */
     color: var(--light-text);
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
@@ -19,7 +19,7 @@ body.bg-dark {
 }
 
 h2 {
-    color: var(--dark-yellow); /* Jaune foncé pour les grands titres */
+    color: var(--very-dark-yellow); /* Jaune très foncé pour les titres */
     margin-bottom: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -39,7 +39,7 @@ h2 {
 }
 
 .navbar a:hover {
-    color: var(--dark-yellow);
+    color: var(--very-dark-yellow);
 }
 
 header {
@@ -47,6 +47,11 @@ header {
     color: var(--light-text);
     padding: 4rem 0;
     text-align: center;
+    margin-bottom: 2rem; /* Petit espace entre le header et le contenu suivant */
+}
+
+.profile-photo {
+    margin-top: 20px; /* Espace entre la barre de navigation et la photo de profil */
 }
 
 /* Smooth Card Styling */
@@ -61,7 +66,7 @@ header {
 }
 
 .custom-card h2, .custom-card h3 {
-    color: var(--dark-yellow); /* Jaune foncé pour les titres dans les cartes */
+    color: var(--very-dark-yellow); /* Jaune très foncé pour les titres dans les cartes */
 }
 
 .custom-card-hover {
@@ -86,7 +91,7 @@ footer.bg-dark {
 }
 
 footer h2 {
-    color: var(--dark-yellow);
+    color: var(--very-dark-yellow);
 }
 
 footer ul {

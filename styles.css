@@ -177,7 +177,7 @@ form .form-control:focus {
     }
 }
 header {
-    padding-top: 100px; /* Adds space between the navbar and the image */
+    padding-top: 250px; /* Adds space between the navbar and the image */
 }
 
 img {

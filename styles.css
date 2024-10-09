@@ -176,10 +176,3 @@ form .form-control:focus {
         padding: 2rem 0;
     }
 }
-header {
-    padding-top: 250px; /* Adds space between the navbar and the image */
-}
-
-img {
-    margin-top: 20px; /* Adds space between the image and any content above */
-}
